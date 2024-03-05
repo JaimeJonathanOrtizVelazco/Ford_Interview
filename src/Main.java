@@ -2,8 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
-    // Method Number to string roman
-    // from 1 to 3000
+    // Problem description : Create a method that transform a given value from 1 to 3000 to roman numbers
     public static void main(String[] args) {
         // Cases where 5 is used
         convertToRoman(545);
@@ -11,6 +10,7 @@ public class Main {
         convertToRoman(440);
         convertToRoman(123);
         convertToRoman(1224);
+        convertToRoman(404);
         // Cases where some values are less or greater than 5, excluding 4
         convertToRoman(3);
         convertToRoman(27);
@@ -54,11 +54,11 @@ public class Main {
         StringBuilder romanNumberString = new StringBuilder();
         for (int i = maxDivider; i > 0; i = i / 10) {
             int divisionResult = value / i;
+            value = value % i;
             // Case where division is zero, nos printing a value
             if (divisionResult == 0) {
                 continue;
             }
-            value = value % i;
             // case value = 4 Example : IV , XL, CD
             if (divisionResult == 4) {
                 romanNumberString.append(romanDigits.get(i));

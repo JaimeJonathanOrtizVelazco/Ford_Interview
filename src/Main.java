@@ -83,6 +83,7 @@ public class Main {
                 for (int j = 0; j < divisionResult - 5; j++) {
                     romanNumberString.append(romanDigits.get(i));
                 }
+                continue;
             }
             // case value 9 Example: IX
             if (divisionResult == 9) {

@@ -30,7 +30,7 @@ public class Main {
     }
 
     public static void convertToRoman(int value) {
-        if (value > 3000) {
+        if (value > 3000 || value < 0) {
             System.out.println("This operation is not allowed: " + value);
             return;
         }
